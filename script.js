@@ -38,6 +38,7 @@ const books = [
 ];
 
 const booksContainer = document.getElementById("books_container");
+const submitBookButton = document.getElementById('bookEntrySubmit');
 
 const setBooksList = (arr) => {
   booksContainer.innerHTML = arr.map(
@@ -57,5 +58,17 @@ const setBooksList = (arr) => {
 };
 
 document.addEventListener("DOMContentLoaded", () => {
+  setBooksList(books);
+});
+
+submitBookButton.addEventListener('submit', () => {
+  const book = {
+    title: "test",
+    author: "test",
+    coverUrl: "https://m.media-amazon.com/images/I/61QnzNzI9fS._AC_UF1000,1000_QL80_.jpg"
+  };
+
+  books.push(book);
+
   setBooksList(books);
 });

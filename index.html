@@ -21,106 +21,35 @@
     <!-- End banner -->
 
     <!-- Begin book display -->
-    <div id="books_container">
-      <div class="book_description">
-        <img
-          src="https://images-na.ssl-images-amazon.com/images/I/51R900QX5BL._SX294_BO1,204,203,200_.jpg"
-          alt="Endurance Shackleton's Incredible Voyage"
-          class="book_cover"
-        />
-        <p>
-          <i>Endurance: Shackleton's Incredible Voyage</i> by Alfred Lansing.
-          This book tells the tale of the sailing ship Endurance and Captain
-          Ernest Shackleton and crew on their expedition to the South pole.
-          Their journey only begins when the Endurance gets locked in ice
-          forcing the Captain and crew to find their way out of a dicy situation
-          on the barren ice pack.
-        </p>
-      </div>
-      <div class="book_description">
-        <img
-          src="https://images-na.ssl-images-amazon.com/images/I/71dpI4OARxS.jpg"
-          alt="The Millionaire Next Door"
-          class="book_cover"
-        />
-        <p>
-          <i
-            >The Millionaire Next Door: The Surprising Secrets of America's
-            Wealthy</i
-          >
-          by Thomas Stanley and William Danko. Everyone has a perception in
-          their head of what a millionaire should look like. Dr. Thomas Stanley
-          and William Danko are hear to crush those misperceptions and lay down
-          the facts of how millionaires live, act, and work their way to the
-          top.
-        </p>
-      </div>
-      <div class="book_description">
-        <img
-          src="https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1309201190l/129565.jpg"
-          alt="Financial Peace Revisited"
-          class="book_cover"
-        />
-        <p>
-          <i>Financial Peace Revisited</i> by Dave Ramsey. Someone who has been
-          bankrupt once, yet a millionaire twice in his life thus far surely
-          must have some money advice to give. Dave Ramsey does just that in his
-          easy to read book, <i>Financial Peace Revisted</i>. This no-nonsense
-          book lays the groundwork for a financially illiterate reader to work
-          their way through debt to success.
-        </p>
-      </div>
-      <div class="book_description">
-        <img
-          src="https://m.media-amazon.com/images/I/51yfd86hYLL.jpg"
-          alt="Flags of Our Fathers"
-          class="book_cover"
-        />
-        <p>
-          <i>Flags of Our Fathers</i> by James Bradley. The author's father,
-          John Bradley, is one the men raising up the American flag on Iwo Jima
-          in World War II. John Bradley goes into great detail of the story of
-          how his father and the other five men got to raising that flag. Their
-          background, the war, and the outcome that raising that flag had on
-          each of them. Even if you have no prior interest in military or war,
-          this book is sure to hold your attention.
-        </p>
-      </div>
-      <div class="book_description">
-        <img
-          src="https://images-na.ssl-images-amazon.com/images/I/81VStYnDGrL.jpg"
-          alt="Steve Jobs"
-          class="book_cover"
-        />
-        <p>
-          <i>Steve Jobs</i> by Walter Isaacson. Many know that Steve Jobs was a
-          complicated man. To get some context on this statement, be sure to
-          read this book. Learn about Steve's childhood and his background in
-          electronics, all the way through to his achievement at Apple Computers
-          and how he has changed the world forever. Steve left nothing off the
-          table about his life for Walter Isaacon to write about; his triumphs,
-          failures, and his own personal demons.
-        </p>
-      </div>
-      <div class="book_description">
-        <img
-          src="https://kbimages1-a.akamaihd.net/63ee0f32-410b-487e-8cee-bf2c93238571/353/569/90/False/big-coal.jpg"
-          alt="Financial Peace Revisited"
-          class="book_cover"
-        />
-        <p>
-          <i>Big Coal: The Dirty Secret Behind America's Energy Future</i> by
-          Jeff Goodell. I don't consider myself a tree hugger and I still got
-          plenty of enjoyment out of this book. Learn about where half the
-          electricity in the United States comes from. Learn about where coal
-          comes from, how it is used, and the aftermath of using it. But should
-          we be giving up on coal if it is such a low-cost energy source and
-          there is a plethora of it available? Read <i>Big Coal</i> to form your
-          own opinion.
-        </p>
-      </div>
-    </div>
+    <div id="books_container"></div>
     <!-- End book display -->
+
+    <!-- Begin new book entry -->
+
+    <fieldset id="new_book_entry">
+      <legend><strong>New book entry</strong></legend>
+      <form id="bookEntryForm">
+        <div>
+          <label for="titleInputText">Book title: </label>
+          <input type="text" id="titleInputText" placeholder="book title" />
+        </div>
+        <div>
+          <label for="authorInputText">Author: </label>
+          <input type="text" id="authorInputText" placeholder="book author" />
+        </div>
+        <div>
+          <label for="coverImageInputText">Cover image URL: </label>
+          <input
+            type="text"
+            id="coverImageInputText"
+            placeholder="book cover image url"
+          />
+        </div>
+        <input type="submit" id="bookEntrySubmit"/>
+      </form>
+    </fieldset>
+
+    <!-- End new book entry -->
 
     <script src="./script.js"></script>
   </body>
