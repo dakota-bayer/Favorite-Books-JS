@@ -1,0 +1,53 @@
+html, body{
+    background-color: Cornsilk;
+    color: #2c3338;
+    font-family: Georgia;
+    width: 100%;
+    margin: 0;
+  }
+  header{
+    background-color: #bd8600;
+    margin: 0;
+  }
+  h1{
+    text-align: center;
+    margin: 0;
+    padding: 1em;
+    Color: Cornsilk;
+    font-size: 2em;
+  }
+  #banner_container{
+    background-image: url(https://images.squarespace-cdn.com/content/v1/5773dde903596ecc892de49f/1606290672221-FROACHB8RVCZ15QSAYH4/banner-books.jpg?format=1500w);
+    height: 10em;
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    background-size: cover;
+    background-position: center;
+  }
+  #banner_text{
+    font-size: 1.3em;
+    margin-right: 60%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-height: 8em;
+  }
+  #books_container{
+    padding: 20px 20px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+  }
+  .book_cover{
+    border-radius: 10px;
+    height: 300px;
+    margin: 10px;
+    box-shadow: 0px 0px 5px #ccc;
+  }
+  .book_description{
+    text-align: center;
+    width: 30em;
+    font-size: 16px;
+  }
