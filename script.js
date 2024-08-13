@@ -36,3 +36,26 @@ const books = [
       "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1543897827i/43097201.jpg",
   },
 ];
+
+const booksContainer = document.getElementById("books_container");
+
+const setBooksList = (arr) => {
+  booksContainer.innerHTML = arr.map(
+    ({ title, author, coverUrl }) =>
+      `
+      <div class="book_description">
+        <img
+          src="${coverUrl}"
+          alt="${title} cover image"
+          class="book_cover"
+        />
+        <div>${title}</div>
+        <div>${author}</div>
+      </div>
+  `
+  ).join("");
+};
+
+document.addEventListener("DOMContentLoaded", () => {
+  setBooksList(books);
+});
