@@ -38,7 +38,15 @@ const books = [
 ];
 
 const booksContainer = document.getElementById("books_container");
-const submitBookButton = document.getElementById('bookEntrySubmit');
+const bookEntryForm = document.getElementById('bookEntryForm');
+const bookEntryFormTitle = document.getElementById('titleInputText');
+const bookEntryFormAuthor = document.getElementById('authorInputText');
+const bookEntryFormUrl = document.getElementById('coverImageInputText');
+
+bookEntryForm,addEventListener('submit', (e) => {
+  e.preventDefault();
+  updateBooks();
+})
 
 const setBooksList = (arr) => {
   booksContainer.innerHTML = arr.map(
@@ -61,14 +69,21 @@ document.addEventListener("DOMContentLoaded", () => {
   setBooksList(books);
 });
 
-submitBookButton.addEventListener('submit', () => {
+function updateBooks(){
   const book = {
-    title: "test",
-    author: "test",
-    coverUrl: "https://m.media-amazon.com/images/I/61QnzNzI9fS._AC_UF1000,1000_QL80_.jpg"
+    title: bookEntryFormTitle.value,
+    author: bookEntryFormAuthor.value,
+    coverUrl: bookEntryFormUrl.value
   };
+
+  if(!book.title || !book.author || !book.coverUrl){
+    alert('Please include a book title, author, and cover URL to add it to your collection!');
+    return;
+  }
 
   books.push(book);
 
   setBooksList(books);
-});
+
+  bookEntryForm.reset();
+}
